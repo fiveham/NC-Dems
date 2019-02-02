@@ -434,7 +434,7 @@
 	  }
 	  
       var docs = [{docId:"1zJU1Qe9zBbGUWco7i8qjVe6C0bBJq5YMZVF4A2ZP", templateId: 2, layer:null, select:"geometry", value:"statewide", gen:gen_layer_data, hookup:hk_data}, // data layer
-                  {docId:"1-yQcmQaSPo-O2bYAKHlL3an1Ferv6gyffzhZJC-T", templateId: 3, layer:null, select:"geometry", value:"congress"   gen:gen_layer_kml,  hookup:setmap }, // KmlLayer
+                  {docId:"1-yQcmQaSPo-O2bYAKHlL3an1Ferv6gyffzhZJC-T", templateId: 3, layer:null, select:"geometry", value:"congress",  gen:gen_layer_kml,  hookup:setmap }, // KmlLayer
                   {docId:"1uP-G0nMrAdaaobSl_CTdBW11hhK1xUmLIbNdqp3K", templateId: 2, layer:null, select:"geometry", value:"county",    gen:gen_layer_ft,   hookup:setmap }//FusionTablesLayer
 				  /*,
                   {docId:"1kG21iCm3yjm99LM0YI_sUce0mnZcuPAE2ReYzSPj", templateId: 2, layer:null, select:"geometry", value:"precinct"}*/];
@@ -717,10 +717,10 @@
         
         return url;
       }
-	  
-	  function gen_sharing_title(){
-	    return "Share the map as it appears";
-	  }
+      
+      function gen_sharing_title(){
+        return "Share the map as it appears";
+      }
       
       function on(){
         var url = gen_sharing_url();
@@ -728,7 +728,7 @@
         
         document.getElementById("sharing-url").value = url;
         document.getElementById("sharing-title").innerHTML = title;
-		
+        
         document.getElementById("modal").style.visibility = "visible";
       }
       
@@ -741,7 +741,7 @@
         document.execCommand("copy");
       }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQzE_F2ZqhXc_tIW4sfBOJBOsAKITo2JA&libraries=places&callback=initAutocomplete"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBV1c_o0m7--JLWGiG8gkrIJlMuZNUEn_4&libraries=places&callback=initAutocomplete"
          async defer></script>
   </body>
 </html>
