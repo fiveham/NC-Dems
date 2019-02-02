@@ -427,28 +427,23 @@
 				  /*,
                   {docId:"1kG21iCm3yjm99LM0YI_sUce0mnZcuPAE2ReYzSPj", templateId: 2, layer:null, select:"geometry", value:"precinct"}*/];
       
-      /*function gen_layer(doc){
-		return doc.gen(doc);
-      }*/
-      
       function hookUpMap(doc){
         if(!doc.layer){
-          doc.layer = doc.gen(doc);//gen_layer(doc);
+          doc.layer = doc.gen(doc);
         }
-        //doc.layer.setMap(map);
-		doc.hookup(doc,map);
+        doc.hookup(doc.layer,map);
       }
       
       function unhookMap(doc){
         if(doc.layer){
-		  if(doc.layer.id && ("data_layer" == doc.layer.id)){
-		    map.data.add({
-			  geometry: null,
-			  id: "data_layer"
-			});
-		  }else{
-		    doc.layer.setMap(null);
-		  }
+          if(doc.layer.id && ("data_layer" == doc.layer.id)){
+            map.data.add({
+              geometry: null,
+              id: "data_layer"
+            });
+          }else{
+            doc.layer.setMap(null);
+          }
         }
       }
       
